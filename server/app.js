@@ -7,7 +7,13 @@ import router1 from './routes/download.route.js'
 const app = express();
 
 // Enable CORS
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://deploy-mern--1whq.vercel.app"],
+    methods:["POST","GET"],
+    credential:true
+  }
+));
 
 // Parse incoming JSON requests (if necessary)
 app.use(express.json()); // For JSON payloads
