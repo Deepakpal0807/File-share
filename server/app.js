@@ -14,6 +14,11 @@ const app = express();
 //     credential:true
 //   }
 // ));
+// app.use(cors(
+//   origin:[""],
+//   methods:["GET","POST"],
+//   Credential:true
+// ))
 app.use(cors())
 
 // Parse incoming JSON requests (if necessary)
